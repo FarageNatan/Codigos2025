@@ -1,4 +1,3 @@
-package Codigos2025;
 import java.util.Scanner;
 
 public class MinhaClasse {

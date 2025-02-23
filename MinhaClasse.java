@@ -3,16 +3,16 @@ import java.util.Scanner;
 public class MinhaClasse {
     public static boolean isPalindromo(String frase){
         int inicio = 0, fim = frase.length() - 1;
-        boolean pal = true;
+        boolean palavra = true;
         while(inicio < fim)
         {
             if(frase.charAt(inicio) != frase.charAt(fim)){
-                pal = false;
+                palavra = false;
             }
             inicio++;
             fim--;
         }
-        return pal;
+        return palavra;
     }
 
     public static void main(String[] args) {

@@ -21,7 +21,7 @@ public class AlteracaoAleatoria {
         char letraNova = (char) ('a' + Math.abs(gerador.nextInt() % 26));
         char letraAlterar = (char) ('a' + Math.abs(gerador.nextInt() % 26));
 
-        System.out.println("A letra que será alterada é: " + letraAlterar);
+        //System.out.println("A letra que será alterada é: " + letraAlterar);
         String frase1 = entrada.nextLine();
 
         while (!frase1.equals("FIM")) {

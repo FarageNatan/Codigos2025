@@ -29,37 +29,38 @@ public class Exercicio6Is {
     }
 
     public static boolean ehInteiro(String numero){
+        boolean X3 = true;
         if (numero.length() == 0) {
-            return false;
+            X3 = false;
         }
 
         int inicio = 0;
         if (numero.charAt(0) == '-') {
             if (numero.length() == 1) {
-                return false;
+                X3 = false;
             }
             inicio = 1;
         }
 
         for (int i = inicio; i < numero.length(); i++) {
             if (numero.charAt(i) < '0' || numero.charAt(i) > '9') {
-                return false;
+                X3 = false;
             }
         }
-        return true;
+        return X3;
     }
 
     public static boolean ehReal(String numero){
+        boolean X4 = true;
         if (numero.length() == 0) {
-            return false;
+            X4 = false;
         }
-
         int inicio = 0;
         boolean temPonto = false;
 
         if (numero.charAt(0) == '-') {
             if (numero.length() == 1) {
-                return false;
+                X4 = false;
             }
             inicio = 1;
         }
@@ -69,30 +70,38 @@ public class Exercicio6Is {
 
             if (c == '.') {
                 if (temPonto || i == inicio || i == numero.length() - 1) {
-                    return false;
+                    X4 = false;
                 }
                 temPonto = true;
             } else if (c < '0' || c > '9') {
-                return false;
+                X4 = false;
             }
         }
-        return true;
+        return X4;
     }
 
     public static void main(String[] args) {
         String fraseTeste = entrada.nextLine();
         while (!fraseTeste.equals("FIM")) {
             if (fraseVogal(fraseTeste)) {
-                System.out.println("X1");
+                System.out.println("SIM");
+            }else{
+                System.out.println("NAO");
             }
             if (fraseConso(fraseTeste)) {
-                System.out.println("X2");
+                System.out.println("SIM");
+            }else{
+                System.out.println("NAO");
             }
             if(ehInteiro(fraseTeste)){
-                System.out.println("X3");
+                System.out.println("SIM");
+            }else{
+                System.out.println("NAO");
             }
             if(ehReal(fraseTeste)){
-                System.out.println("X4");
+                System.out.println("SIM");
+            }else{
+                System.out.println("NAO");
             }
             fraseTeste = entrada.nextLine();
         }

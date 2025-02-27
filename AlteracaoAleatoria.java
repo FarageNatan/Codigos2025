@@ -23,7 +23,7 @@ public class AlteracaoAleatoria {
 
         //System.out.println("A letra que será alterada é: " + letraAlterar);
         String frase1 = entrada.nextLine();
-
+        
         while (!frase1.equals("FIM")) {
             String fraseMod = alterarAleatorio(frase1, letraAlterar, letraNova);
             System.out.println(fraseMod);

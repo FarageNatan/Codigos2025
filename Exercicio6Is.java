@@ -82,7 +82,7 @@ public class Exercicio6Is {
 
     public static void main(String[] args) {
         String fraseTeste = entrada.nextLine();
-        while (!fraseTeste.equals("FIM")) {
+        while (fraseTeste.length() != 3 || fraseTeste.charAt(0) != 'F' || fraseTeste.charAt(1) != 'I' || fraseTeste.charAt(2) != 'M') {
             if (fraseVogal(fraseTeste)) {
                 System.out.print("SIM ");
             }else{

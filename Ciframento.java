@@ -15,7 +15,7 @@ public class Ciframento {
     public static void main(String[] args) {
        String frase1, fraseMod;
        frase1 = entrada.nextLine();
-       while (frase1.compareTo("FIM") != 0) {
+       while (frase1.length() != 3 || frase1.charAt(0) != 'F' || frase1.charAt(1) != 'I' || frase1.charAt(2) != 'M') {
            fraseMod = fraseModificada(frase1);
            System.out.println(fraseMod);
            frase1 = entrada.nextLine();

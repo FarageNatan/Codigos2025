@@ -13,7 +13,7 @@ public class InversaoString {
     public static void main(String[] args) {
         String fraseTeste, fraseInvertida;
         fraseTeste = entrada.nextLine();
-        while(fraseTeste.compareTo("FIM") != 0){
+        while (fraseTeste.length() != 3 || fraseTeste.charAt(0) != 'F' || fraseTeste.charAt(1) != 'I' || fraseTeste.charAt(2) != 'M') {
             fraseInvertida = inverterString(fraseTeste);
             System.out.println(fraseInvertida);
             fraseTeste = entrada.nextLine();

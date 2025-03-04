@@ -19,7 +19,7 @@ public class MinhaClasse {
         Scanner entrada = new Scanner(System.in);
         String primeiraFrase;
         primeiraFrase = entrada.nextLine();
-        while(primeiraFrase.compareTo("FIM") != 0){
+        while (´primeiraFrase.length() != 3 || ´primeiraFrase.charAt(0) != 'F' || ´primeiraFrase.charAt(1) != 'I' || ´primeiraFrase.charAt(2) != 'M') {
             if(isPalindromo(primeiraFrase)){
                 System.out.println("SIM");
             }

@@ -84,24 +84,24 @@ public class Exercicio6Is {
         String fraseTeste = entrada.nextLine();
         while (!fraseTeste.equals("FIM")) {
             if (fraseVogal(fraseTeste)) {
-                System.out.println("SIM");
+                System.out.print("SIM ");
             }else{
-                System.out.println("NAO");
+                System.out.print("NAO ");
             }
             if (fraseConso(fraseTeste)) {
-                System.out.println("SIM");
+                System.out.print("SIM ");
             }else{
-                System.out.println("NAO");
+                System.out.print("NAO ");
             }
             if(ehInteiro(fraseTeste)){
-                System.out.println("SIM");
+                System.out.print("SIM ");
             }else{
-                System.out.println("NAO");
+                System.out.print("NAO ");
             }
             if(ehReal(fraseTeste)){
-                System.out.println("SIM");
+                System.out.print("SIM\n");
             }else{
-                System.out.println("NAO");
+                System.out.print("NAO\n");
             }
             fraseTeste = entrada.nextLine();
         }

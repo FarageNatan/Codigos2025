@@ -1,31 +1,47 @@
-#include <stdlib.h>
 #include <stdio.h>
-#include <stdbool.h>
 #include <string.h>
+#include <ctype.h>
+#include <stdbool.h>
 
-bool isPalindromo(char frase[100]){
-    int inicio = 0, fim = strlen(frase) - 1;
-    while(inicio < fim){
-        if(frase[inicio] != frase[fim]){
-            return false;
+// Função para verificar se a string é um palíndromo
+int ehPalindromo(const char *str) {
+    bool ehIgual = true;
+    int inicio = 0;
+    int fim = strlen(str) - 1;
+
+    // Compara os caracteres do início e do fim, movendo-se para o centro
+    while (fim > inicio) {
+        
+        // Converte os caracteres para minúsculas antes de comparar
+        if (tolower(str[inicio]) != tolower(str[fim])) {
+            ehIgual = false;
+            return ehIgual; // Não é palíndromo
         }
+
         inicio++;
         fim--;
     }
-    return true;
+
+    return ehIgual; // É palíndromo
 }
 
-int main(){
-    char frase1[100];
-    scanf("%[^\n]", frase1);
-    while(strcmp(frase1, "FIM") != 0){
-        if(isPalindromo(frase1)){
+int main() {
+    char str[100];
+
+    fgets(str, sizeof(str), stdin);
+
+    // Remove o caractere de nova linha (\n) adicionado pelo fgets
+    str[strcspn(str, "\n")] = '\0';
+
+    while(strcmp(str, "FIM") != 0){
+        if(ehPalindromo(str)){
             printf("SIM\n");
         }
         else{
             printf("NAO\n");
         }
-        scanf(" %[^\n]", frase1);
+        scanf(" %[^\n]", str);
     }
+
     return 0;
 }

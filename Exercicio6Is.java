@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Exercicio6Is {
     static Scanner entrada = new Scanner(System.in);
 
-    public static boolean fraseVogal(String frase) {
+    public static boolean fraseVogal(String frase) { //verificar se tem apenas vogal
         boolean resp = true;
         for (int i = 0; i < frase.length(); i++) {
             char c = frase.charAt(i);
@@ -14,7 +14,7 @@ public class Exercicio6Is {
         return resp;
     }
 
-    public static boolean fraseConso(String frase) {
+    public static boolean fraseConso(String frase) { //verificar se tem apenas consoante
         if (ehInteiro(frase) || ehReal(frase)) {
             return false;
         }
@@ -28,7 +28,7 @@ public class Exercicio6Is {
         return resp;
     }
 
-    public static boolean ehInteiro(String numero){
+    public static boolean ehInteiro(String numero){ //verificar se eh um numero inteiro
         boolean X3 = true;
         if (numero.length() == 0) {
             X3 = false;
@@ -50,7 +50,7 @@ public class Exercicio6Is {
         return X3;
     }
 
-    public static boolean ehReal(String numero){
+    public static boolean ehReal(String numero){ //verificar se é um numero real
         boolean X4 = true;
         if (numero.length() == 0) {
             X4 = false;
@@ -69,7 +69,7 @@ public class Exercicio6Is {
             char c = numero.charAt(i);
 
             if (c == '.') {
-                if (temPonto || i == inicio || i == numero.length() - 1) {
+                if (temPonto || i == inicio || i == numero.length() - 1) { //verifica se tem um ponto e se ele ja foi usado anteriormente
                     X4 = false;
                 }
                 temPonto = true;
@@ -103,7 +103,7 @@ public class Exercicio6Is {
             }else{
                 System.out.print("NAO\n");
             }
-            fraseTeste = entrada.nextLine();
+            fraseTeste = entrada.nextLine(); //evitar loop infinito
         }
     }
 }

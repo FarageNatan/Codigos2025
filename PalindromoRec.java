@@ -29,13 +29,13 @@ public class PalindromoRec {
 
         primeiraFrase = entrada.nextLine();
 
-        while (!primeiraFrase.equals("FIM")) {
+        while (primeiraFrase.length() != 3 || primeiraFrase.charAt(0) != 'F' || primeiraFrase.charAt(1) != 'I' || primeiraFrase.charAt(2) != 'M') {
             if (isPalindromo(primeiraFrase)) {
                 System.out.println("SIM");
             } else {
                 System.out.println("NAO");
             }
-            primeiraFrase = entrada.nextLine();
+            primeiraFrase = entrada.nextLine(); //segunda leitura para evitar loop infinito
         }
 
         entrada.close();
